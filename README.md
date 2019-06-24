@@ -1,2 +1,2 @@
-# Safe-Sound
+# Safe & Sound
 graduation project
