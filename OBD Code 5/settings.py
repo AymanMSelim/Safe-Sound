@@ -14,28 +14,47 @@ gray = (140,140,140)
 yellow = (255,211,0)
 blue = (0,0,102)
 
-# Fonts
-propertyFont = font.Font("fonts\\OpenSans-BoldItalic.ttf",31)
-valueFont = font.Font("fonts\\LemonMilk.otf",30)
-alarmFont = font.Font("fonts\\LemonMilk.otf",25)
-codeFont = font.Font("fonts\\LemonMilk.otf",23)
-descFont = font.Font("fonts\\OpenSans-BoldItalic.ttf",22)
-extraFont =font.Font("fonts\\OpenSans-BoldItalic.ttf",35)
+try:
+	# Fonts
+	propertyFont = font.Font("fonts\\OpenSans-BoldItalic.ttf",31)
+	valueFont = font.Font("fonts\\LemonMilk.otf",30)
+	alarmFont = font.Font("fonts\\LemonMilk.otf",25)
+	codeFont = font.Font("fonts\\LemonMilk.otf",23)
+	descFont = font.Font("fonts\\OpenSans-BoldItalic.ttf",22)
+	extraFont =font.Font("fonts\\OpenSans-BoldItalic.ttf",35)
 
-# Images
-logo = image.load("images\\logo\\finalLogo.png")
-nxtArrow = image.load("images\\arrows\\next.png")
-prvArrow = image.load("images\\arrows\\previous.png")
-rtnButton = image.load("images\\buttons\\Return.png")
-clrButton = image.load("images\\buttons\\Clear.png")
-alert = image.load("images\\alarm\\alarm.jpg")
-diagnostic = image.load("images\\diagno\\diagnostic.jpg")
-title =image.load("images\\title\\obdTitle.png")
+	# Images
+	logo = image.load("images\\logo\\finalLogo.png")
+	nxtArrow = image.load("images\\arrows\\next.png")
+	prvArrow = image.load("images\\arrows\\previous.png")
+	rtnButton = image.load("images\\buttons\\Return.png")
+	clrButton = image.load("images\\buttons\\Clear.png")
+	alert = image.load("images\\alarm\\alarm.jpg")
+	diagnostic = image.load("images\\diagno\\diagnostic.jpg")
+	title =image.load("images\\title\\obdTitle.png")
+	# load tach images
+	files_names = ['{}.png'.format(i) for i in range(0, 42)]
+	tach_images = [image.load(path.join("images\\tach\\",file)) for file in files_names]
+except:
+	propertyFont = font.Font("fonts/OpenSans-BoldItalic.ttf",31)
+	valueFont = font.Font("fonts/LemonMilk.otf",30)
+	alarmFont = font.Font("fonts/LemonMilk.otf",25)
+	codeFont = font.Font("fonts/LemonMilk.otf",23)
+	descFont = font.Font("fonts/OpenSans-BoldItalic.ttf",22)
+	extraFont =font.Font("fonts/OpenSans-BoldItalic.ttf",35)
 
-
-# load tach images
-files_names = ['{}.png'.format(i) for i in range(0, 42)]
-tach_images = [image.load(path.join("images\\tach\\",file)) for file in files_names]
+	# Images
+	logo = image.load("images/logo/finalLogo.png")
+	nxtArrow = image.load("images/arrows/next.png")
+	prvArrow = image.load("images/arrows/previous.png")
+	rtnButton = image.load("images/buttons/Return.png")
+	clrButton = image.load("images/buttons/Clear.png")
+	alert = image.load("images/alarm/alarm.jpg")
+	diagnostic = image.load("images/diagno/diagnostic.jpg")
+	title =image.load("images/title/obdTitle.png")
+	# load tach images
+	files_names = ['{}.png'.format(i) for i in range(0, 42)]
+	tach_images = [image.load(path.join("images/tach/",file)) for file in files_names]
 
 # Display settings
 Resolution = (800,480)
