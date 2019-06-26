@@ -1,0 +1,122 @@
+########################################################################
+
+Multi Vechiles :
+
+single vechile : 0
+multi vechile : 1
+Vehicle(s)+Pedestrian(s) : 2
+Vehicle(s)+Cyclist(s) only : 3
+Cyclists only : 4
+Vehicle(s)+multiple other types : 5
+Cyclist(s)+Pedestrian(s) only : 6
+Others without non-parked veh : 7
+other : 8
+
+########################################################################
+
+intersection:
+
+Unknown : 0
+intersection : 1
+at landmark : 2
+
+########################################################################
+
+crashSHDes:
+
+yes : 0
+no : 1
+
+########################################################################
+
+flathill:
+
+flat : 0
+hill : 1
+
+########################################################################
+
+RoadCharacter:
+
+Unknown : 0
+Bridge : 1
+Motorway Ramp : 2
+Railway Crossing : 3
+
+########################################################################
+
+roadCurvature:
+
+Straight : 0
+Easy : 1
+Modereate : 2
+Severe : 3
+
+########################################################################
+
+RoadWet:
+
+uknown : 0
+wet : 1
+Dry : 2
+ice/snow : 3
+
+########################################################################
+
+Traffic Control:
+
+Nil : 0
+Traffic Signals : 1
+Stop Sign : 2
+Give Way Sign : 3
+Pointsman : 4
+School Patrol : 5
+N/A : 6
+
+########################################################################
+
+Urban :
+
+Urban : 0
+open road : 1
+
+########################################################################
+
+Light:
+
+Unknown : 0
+Bright Sun : 1
+Overcast : 2
+Twilight : 3
+Dark : 4
+
+########################################################################
+
+street light:
+
+Unknown : 0
+on : 1
+off : 2
+none : 3
+
+########################################################################
+
+Weather:
+
+Unknown : 0
+fine : 1
+Mist : 2
+Light Rain : 3
+Heavy Rain : 4
+snow : 5
+
+########################################################################
+
+Crash Severity:
+
+N : 0
+M : 1
+S : 2
+F : 3
+
+########################################################################
