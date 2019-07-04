@@ -1,10 +1,9 @@
 import pandas as pd  
-import numpy as np 
-import seaborn as sns
-from matplotlib import pyplot
+import numpy as np
+import serial
 from utils import *
 #Importing DataSet
-dataset = pd.read_csv("CAS_Data_1.csv", nrows = 100000)
+dataset = pd.read_csv("CAS_Data_1.csv", nrows = 10000)
 #dataset.head()  
 #print(dataset.dtypes)
 
@@ -36,6 +35,8 @@ classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 
 
+#Serial function with Arduino
+
 
 #Prediction Function
 
@@ -53,8 +54,15 @@ def Pre_Function():
         print("the severity of the crash is super ")
     elif( o == 3):
         print("the severity of the crash is Fatal ")
-#Getting Accurecy, Precision, Recall and F1_score
+    def Serial_Function(x):
+        ser = serial.Serial('/dev/ttyACM0',9600,timeout = 1)
+        ser.write(x)
+        return x
+    U = Serial_Function(o)
+    #print(U)
+    return o 
 
+#Getting Accurecy, Precision, Recall and F1_score
 RF_base_original_metrics = structure_and_print_results('RF Baseline', 'Original', y_test, y_pred, digits=5)
 
 u = Pre_Function()
